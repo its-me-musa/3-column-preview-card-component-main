@@ -1,0 +1,127 @@
+:root {
+    /* fonts */
+    --ff-primary: 'Lexend Deca', sans-serif;
+    --ff-headings: 'Big Shoulders Display', cursive;
+
+    /* primary colours */
+    --clr-bright-orange: hsl(31, 77%, 52%);
+    --clr-dark-cyan: hsl(184, 100%, 22%);
+    --clr-very-dark-cyan: hsl(179, 100%, 13%);
+    
+    /* neutral colors */
+    /* paragraphs */
+    --clr-transparent-white: hsla(0, 0%, 100%, 0.75);
+    
+    /* background, headings, buttons */
+    --clr-very-light-gray: hsl(0, 0%, 95%);
+}
+
+* {
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 15px;
+}
+
+h1 {
+    font-family: var(--ff-headings);
+    font-weight: 700;
+    text-transform: uppercase;
+    color: var(--clr-very-light-gray);
+    margin-top: 40px;
+}
+
+p {
+    font-family: var(--ff-primary);
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 1.5;
+    color: var(--clr-transparent-white);
+    margin: 30px 0 90px 0;
+}
+
+button {
+    background-color: var(--clr-very-light-gray);
+    border: none;
+    font-family: var(--ff-primary);
+    font-size: 15px;
+    padding: 15px 32px;
+    border-radius: 30px;
+}
+
+.container {
+    max-width: 1440px;
+    height: 100vh;
+    background-color: var(--clr-very-light-gray);
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.cards {
+    max-width: 920px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.card {
+    padding: 50px;
+}
+
+.sedans {
+    background-color: var(--clr-bright-orange);
+}
+
+.sedans button {
+    color: var(--clr-bright-orange);   
+}
+
+.suvs {
+    background-color: var(--clr-dark-cyan);
+}
+
+.suvs button {
+    color: var(--clr-dark-cyan);
+}
+
+.luxury {
+    background-color: var(--clr-very-dark-cyan);
+}
+
+.luxury button {
+    color: var(--clr-very-dark-cyan);
+}
+
+button:active, button:hover, button:focus{
+    background-color: transparent;
+    color: var(--clr-transparent-white);
+    cursor: pointer;
+    border: 2px solid var(--clr-very-light-gray);
+}
+
+@media (max-width: 690px) {
+    .container {
+        height: auto;
+    }
+
+    .cards {
+        grid-template-columns: 1fr;
+        margin: 40px 15%;
+    }
+} 
+
+
+@media (max-width: 375px) {
+    .container {
+        height: auto;
+    }
+
+    .cards {
+        grid-template-columns: 1fr;
+        margin: 80px 20px;
+    }
+}
